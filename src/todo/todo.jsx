@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
+
 export default function Todo() {
+    const listaLocalStorage = JSON.parse(localStorage.getItem("Lista"));
     const [atividade, setAtividade] = useState("");
-    const [lista, setLista] = useState([]);
-    const [id, setid] = useState(1);
+    const [lista, setLista] = useState(listaLocalStorage || []);
+    const [id, setid] = useState(listaLocalStorage[listaLocalStorage, length - 1]?.id + 1 || 1);
 
     const salvar = (e) => {
         e.preventDefault()
         setLista([...lista, {
-            atividade:atividade, id:id
+            atividade: atividade, id: id
         }]);
         setid(id + 1)
         console.log(lista)
@@ -24,13 +26,13 @@ export default function Todo() {
                 <button>Encrementa</button>
             </form>
 
-            {lista.map((ativ)=> 
-                <div key={ativ.id}> 
+            {lista.map((ativ) =>
+                <div key={ativ.id}>
                     <p>{ativ.id}</p>
                     <p>{ativ.atividade}</p>
                 </div>
-           )}
-        
+            )}
+
         </div>
     )
 }

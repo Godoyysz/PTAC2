@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom"
+import './style.css'
 
 export default function Todo() {
     const listaLocalStorage = JSON.parse(localStorage.getItem("Lista"))|| [];
@@ -26,9 +27,9 @@ export default function Todo() {
             <h1>lista de atividades</h1>
             <Link to="/">home</Link>
             <form onSubmit={salvar}>
-                <input type="text"
+                <input className="tutu"type="text"
                     onChange={(e) => { setAtividade(e.target.value) }} />
-                <button>Encrementa</button>
+                <button className="buti">Encrementa</button>
             </form>
 
             {lista.map((ativ) =>
@@ -45,8 +46,9 @@ export default function Todo() {
                 </ul>
 
                 </div>
-            )}
-
+            )
+            }
         </div>
+        
     )
 }

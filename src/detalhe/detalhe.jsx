@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import Card from "..componentes/Card"
+import Card from "../componentes/Card"
 
 export default function (){
 
     const { id } = useParams();
     const lista = JSON.parse(localStorage.getItem("Lista"));
 
-    const atuvudade = lista.filter( (ativ) => {
+    const atividade = lista.filter( (ativ) => {
         if(ativ.id == id){
             return ativ;
         }

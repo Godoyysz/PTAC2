@@ -1,0 +1,37 @@
+.cor {
+    background-color:#8f1414;
+    border-radius: 7px;
+    padding: 10px;;
+  }
+  
+  .homezin {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ajuste a altura conforme necessário */
+    height: 300px;
+    color: white;
+  }
+  
+    .butao {
+        text-align: center;
+        border-radius: 7px;
+        padding: 8px 10px;
+     margin-top: 66px;
+    }
+  
+  
+  .inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .inputi {
+    text-align: center;
+    width: 100px;
+  }
+  
